@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Crush</title>
+    <script src="assets/js/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-firestore.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/materialize.min.js"></script>
+    <script src="assets/js/vue.js"></script>
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+
+
+    </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Welcome To Advt</a>
+        <a onclick="logOut()"class=" logOut waves-effect waves-light btn right">Log Out</a>
+      </div>
+    </nav>
+
+
+  <div id="app" >
+    <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Enter bus no " id="busNo" type="text" class="validate">
+          <input placeholder="Enter date in dd/mm/yy format" id="date" type="text" class="validate">
+          <input placeholder="Enter add in text" id="add" type="text" class="validate">
+          <a v-on:click = "check()"  id="check" class="waves-effect waves-light btn right">Check Avalability</a>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <!-- message -->
+  <div class="row" v-show="messageBox">
+        <div class="col s12 m6">
+          <div class="card-panel ">
+            <div class="card-content ">
+
+              <h5> {{message}}</h5>
+              <div class="">
+
+            <a id="book" v-show="BookButton" v-on:click = "book()" class="waves-effect waves-light btn ">Book</a>
+              </div>
+          </div>
+        </div>
+      </div>
+ </div>
+
+
+  <!-- add -->
+  <div class="row" v-show="addBox">
+        <div class="col s12 m6">
+          <div class="card-panel ">
+            <div class="card-content ">
+            <h3>Booked add  on this date</h3>
+              <h5>{{add}}</h5>
+
+          </div>
+        </div>
+      </div>
+ </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+  <script>
+
+
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDSrELpEAvQ-EGrYiXfAcYDzjTmIWDD0vI",
+      authDomain: "advt-c1292.firebaseapp.com",
+      databaseURL: "https://advt-c1292.firebaseio.com",
+      projectId: "advt-c1292",
+      storageBucket: "",
+      messagingSenderId: "328130618459"
+    };
+    firebase.initializeApp(config);
+  </script>
+</script>
+           <script src="assets/js/app.js"></script>
+
+  </body>
+</html>

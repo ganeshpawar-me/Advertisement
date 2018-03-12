@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.4.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.4.0/firebaseui.css" />
+    <script src="https://www.gstatic.com/firebasejs/ui/2.4.0/firebase-ui-auth__{LANGUAGE_CODE}.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/2.4.0/firebase-ui-auth.css" />
+    <script src="assets/js/firebase.js"></script>
+
+  </head>
+  <body>
+
+    <!-- The surrounding HTML is left untouched by FirebaseUI.
+           Your app may use that space for branding, controls and other customizations.-->
+      <h1>Welcome Advertisement</h1>
+      <div id="firebaseui-auth-container"></div>
+
+      <script>
+    // Initialize Firebase
+
+  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDSrELpEAvQ-EGrYiXfAcYDzjTmIWDD0vI",
+      authDomain: "advt-c1292.firebaseapp.com",
+      databaseURL: "https://advt-c1292.firebaseio.com",
+      projectId: "advt-c1292",
+      storageBucket: "",
+      messagingSenderId: "328130618459"
+    };
+    firebase.initializeApp(config);
+  </script>
+  </script>
+         <script type="text/javascript">
+           // FirebaseUI config.
+           var uiConfig = {
+             signInSuccessUrl: 'home.html',
+             signInOptions: [
+               // Leave the lines as is for the providers you want to offer your users.
+               firebase.auth.GoogleAuthProvider.PROVIDER_ID
+
+             ],
+             // Terms of service url.
+             tosUrl: '<your-tos-url>'
+           };
+
+           // Initialize the FirebaseUI Widget using Firebase.
+           var ui = new firebaseui.auth.AuthUI(firebase.auth());
+           // The start method will wait until the DOM is loaded.
+           ui.start('#firebaseui-auth-container', uiConfig);
+         </script>
+
+
+
+  </body>
+</html>

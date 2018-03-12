@@ -1,0 +1,14 @@
+#app{
+
+margin-left: 30%;
+margin-top: 2%;
+}
+
+h3 , h5{
+  color: #ee6e73;
+}
+
+.logOut {
+  margin-top: 10px;
+  margin-right: 10px;
+}
